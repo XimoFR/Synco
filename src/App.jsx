@@ -1,10 +1,19 @@
+import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import IntroPage from './pages/Intro/IntroPage'
+import HomePage from './pages/Home/HomePage'
 
 function App() {
+  const [introComplete, setIntroComplete] = useState(false)
+
+  if (!introComplete) {
+    return <IntroPage onComplete={() => setIntroComplete(true)} />
+  }
+
   return (
     <BrowserRouter>
       <Routes>
-        {/* Routes will be added per feature commit */}
+        <Route path="/" element={<HomePage />} />
       </Routes>
     </BrowserRouter>
   )
