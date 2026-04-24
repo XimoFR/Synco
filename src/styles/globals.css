@@ -1,0 +1,46 @@
+@import "tailwindcss";
+@import "./fonts.css";
+
+@theme {
+  /* Colors */
+  --color-lavender: #C9A7F2;
+  --color-lime:     #D4FF4F;
+  --color-cream:    #F5F0E8;
+  --color-obsidian: #0A0A0A;
+  --color-surface:  #131313;
+  --color-muted:    #2A2825;
+
+  /* Typography */
+  --font-display: 'Clash Display', sans-serif;
+  --font-body:    'Geist', sans-serif;
+
+  /* Border radius */
+  --radius-card: 1.5rem;
+  --radius-pill: 9999px;
+  --radius-blob: 3rem;
+
+  /* Easing */
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-body);
+  background-color: var(--color-obsidian);
+  color: var(--color-cream);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-lavender);
+  color: var(--color-obsidian);
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-obsidian); }
+::-webkit-scrollbar-thumb { background: var(--color-muted); border-radius: 9999px; }
