@@ -5,10 +5,23 @@ export default function Footer() {
   return (
     <footer
       style={{
-        background:  '#0A0A0A',
-        borderTop:   '1px solid rgba(201,167,242,0.1)',
+        position:   'relative',
+        overflow:   'hidden',
+        background: '#0A0A0A',
+        borderTop:  '1px solid rgba(201,167,242,0.1)',
       }}
     >
+      {/* Atmospheric glow */}
+      <div
+        style={{
+          position:      'absolute',
+          inset:         0,
+          pointerEvents: 'none',
+          background:
+            'radial-gradient(ellipse 65% 80% at 15% 50%, rgba(124,58,237,0.09) 0%, transparent 55%),' +
+            'radial-gradient(ellipse 40% 50% at 95% 100%, rgba(212,255,79,0.06) 0%, transparent 50%)',
+        }}
+      />
       {/* Main footer body */}
       <div
         style={{

@@ -29,10 +29,22 @@ export default function TestimonialsSection() {
         overflow:      'hidden',
         paddingTop:    'clamp(96px, 11vh, 128px)',
         paddingBottom: 'clamp(96px, 11vh, 128px)',
-        background:    '#131313',
+        background:    '#0A0A0A',
         borderTop:     '1px solid rgba(201,167,242,0.1)',
       }}
     >
+
+      {/* Atmospheric glow */}
+      <div
+        style={{
+          position:      'absolute',
+          inset:         0,
+          pointerEvents: 'none',
+          background:
+            'radial-gradient(ellipse 70% 55% at 50% 115%, rgba(124,58,237,0.16) 0%, transparent 55%),' +
+            'radial-gradient(ellipse 40% 35% at 98% -5%, rgba(201,167,242,0.09) 0%, transparent 50%)',
+        }}
+      />
 
       <div
         style={{
@@ -51,7 +63,7 @@ export default function TestimonialsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          style={{ marginBottom: '64px' }}
+          style={{ marginBottom: '64px', textAlign: 'center' }}
         >
           <p
             style={{

@@ -1,10 +1,13 @@
-import { Toaster } from 'sonner'
-import AppNav from './components/AppNav'
-import Hero from './components/Hero'
-import MarqueeBand from './components/MarqueeBand'
-import MarqueeBandReverse from './components/MarqueeBandReverse'
-import HowItWorks from './components/HowItWorks'
-import ConcertsSection from './components/ConcertsSection'
+import { Toaster }           from 'sonner'
+import AppNav               from './components/AppNav'
+import Hero                 from './components/Hero'
+import MarqueeBand          from './components/MarqueeBand'
+import MarqueeBandReverse   from './components/MarqueeBandReverse'
+import HowItWorks           from './components/HowItWorks'
+import ConcertsSection      from './components/ConcertsSection'
+import CommunitySection     from './components/CommunitySection'
+import TestimonialsSection  from './components/TestimonialsSection'
+import Footer               from './components/Footer'
 
 export default function HomePage() {
   return (
@@ -29,7 +32,10 @@ export default function HomePage() {
         <MarqueeBand />
         <MarqueeBandReverse />
         <ConcertsSection />
+        <CommunitySection />
+        <TestimonialsSection />
       </main>
+      <Footer />
     </div>
   )
 }

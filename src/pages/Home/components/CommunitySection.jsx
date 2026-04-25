@@ -21,6 +21,18 @@ export default function CommunitySection() {
       }}
     >
 
+      {/* Atmospheric glow */}
+      <div
+        style={{
+          position:      'absolute',
+          inset:         0,
+          pointerEvents: 'none',
+          background:
+            'radial-gradient(ellipse 50% 60% at 108% 40%, rgba(201,167,242,0.11) 0%, transparent 55%),' +
+            'radial-gradient(ellipse 45% 40% at -5% 90%, rgba(212,255,79,0.08) 0%, transparent 50%)',
+        }}
+      />
+
       {/* Ghost background text */}
       <div
         style={{
@@ -59,7 +71,7 @@ export default function CommunitySection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          style={{ marginBottom: '64px' }}
+          style={{ marginBottom: '64px', textAlign: 'right' }}
         >
           <p
             style={{
@@ -71,7 +83,7 @@ export default function CommunitySection() {
               margin:        '0 0 20px 0',
             }}
           >
-            — Comunidad synco
+            Comunidad synco —
           </p>
           <h2
             style={{

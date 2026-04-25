@@ -20,7 +20,7 @@ const ITEMS = [
 export default function MarqueeBandReverse() {
   return (
     <div
-      className="overflow-hidden py-7 bg-surface"
+      className="overflow-hidden py-7 bg-obsidian"
       style={{
         borderTop: '2px solid rgba(201,167,242,0.12)',
         borderBottom: '2px solid rgba(201,167,242,0.12)',

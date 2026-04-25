@@ -116,7 +116,7 @@ function FeaturedCard({ concert }) {
           flexDirection: 'column',
           justifyContent:'space-between',
           padding:       '44px 52px',
-          background:    '#131313',
+          background:    '#0A0A0A',
         }}
       >
         <div>
@@ -192,7 +192,7 @@ function FeaturedCard({ concert }) {
                     height:          28,
                     borderRadius:    '50%',
                     background:      '#C9A7F2',
-                    border:          '2px solid #131313',
+                    border:          '2px solid #0A0A0A',
                     display:         'flex',
                     alignItems:      'center',
                     justifyContent:  'center',
@@ -285,7 +285,7 @@ function ConcertCard({ concert, index }) {
         border:        '1px solid rgba(201,167,242,0.12)',
         overflow:      'hidden',
         transition:    'border-color 0.3s ease',
-        background:    '#131313',
+        background:    '#0A0A0A',
       }}
     >
       {/* Cover */}
@@ -410,7 +410,7 @@ function ConcertCard({ concert, index }) {
                     height:         20,
                     borderRadius:   '50%',
                     background:     '#C9A7F2',
-                    border:         '2px solid #131313',
+                    border:         '2px solid #0A0A0A',
                     display:        'flex',
                     alignItems:     'center',
                     justifyContent: 'center',
@@ -480,7 +480,7 @@ function SkeletonCard() {
   return (
     <div
       style={{
-        background:   '#131313',
+        background:   '#0A0A0A',
         border:       '1px solid rgba(201,167,242,0.07)',
         overflow:     'hidden',
         animation:    'pulse 2s cubic-bezier(0.4,0,0.6,1) infinite',
@@ -533,15 +533,31 @@ export default function ConcertsSection() {
     <section
       id="conciertos"
       style={{
+        position:      'relative',
+        overflow:      'hidden',
         paddingTop:    'clamp(96px, 11vh, 128px)',
         paddingBottom: 'clamp(96px, 11vh, 128px)',
-        background:    '#131313',
+        background:    '#0A0A0A',
         borderTop:     '1px solid rgba(201,167,242,0.1)',
         borderBottom:  '1px solid rgba(201,167,242,0.1)',
       }}
     >
+      {/* Atmospheric glow */}
       <div
         style={{
+          position:      'absolute',
+          inset:         0,
+          pointerEvents: 'none',
+          background:
+            'radial-gradient(ellipse 60% 50% at 105% 8%, rgba(124,58,237,0.14) 0%, transparent 55%),' +
+            'radial-gradient(ellipse 50% 45% at -8% 92%, rgba(212,255,79,0.08) 0%, transparent 52%)',
+        }}
+      />
+
+      <div
+        style={{
+          position:     'relative',
+          zIndex:       10,
           maxWidth:     '1400px',
           margin:       '0 auto',
           paddingLeft:  'clamp(24px, 5vw, 80px)',
@@ -723,7 +739,7 @@ export default function ConcertsSection() {
         {/* ── Grid ── */}
         {loading ? (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-            <div style={{ background: '#131313', border: '1px solid rgba(201,167,242,0.07)', height: '300px', animation: 'pulse 2s ease infinite' }} />
+            <div style={{ background: '#0A0A0A', border: '1px solid rgba(201,167,242,0.07)', height: '300px', animation: 'pulse 2s ease infinite' }} />
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
               {Array.from({ length: 3 }).map((_, i) => <SkeletonCard key={i} />)}
             </div>

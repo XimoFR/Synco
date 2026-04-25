@@ -34,6 +34,18 @@ export default function HowItWorks() {
       }}
     >
 
+      {/* Atmospheric glow */}
+      <div
+        style={{
+          position:      'absolute',
+          inset:         0,
+          pointerEvents: 'none',
+          background:
+            'radial-gradient(ellipse 55% 50% at -5% 25%, rgba(124,58,237,0.13) 0%, transparent 55%),' +
+            'radial-gradient(ellipse 40% 35% at 108% 80%, rgba(212,255,79,0.07) 0%, transparent 50%)',
+        }}
+      />
+
       {/* Ghost background text */}
       <div
         style={{
